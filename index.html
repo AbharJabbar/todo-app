@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <title>Todo List</title>
+  </head>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background: #f7f1f1;
+      font-size: 1.1rem;
+      font-family: "Quicksand", sans-serif !important;
+      height: 100%;
+    }
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      font-weight: lighter;
+    }
+
+    #app {
+      width: 500px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    input[type="text"] {
+      width: 60%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 20%;
+      background-color: #ff6666;
+      color: white;
+      padding: 10px 10px;
+      margin: 8px 0;
+      font-weight: bolder;
+      border: white solid;
+      border-width: thin;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #da5656;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin: 8px 0;
+      font-weight: 500;
+    }
+
+    .delete-button {
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .edit-button {
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .updatebtn {
+      display: none !important;
+    }
+    .element-list {
+      border: none;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .container {
+      background-color: #000000;
+      width: 55%;
+      padding-bottom: 70px;
+      margin-left: 340px;
+      background: #ff6666;
+      color: #fff;
+      box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.1);
+      opacity: 0.8;
+    }
+    .task-item {
+      position: relative; /* Make the parent element a positioned container */
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>ToDo</h1>
+
+      <div id="app">
+        <input type="text" id="input-field" placeholder="Enter Task here" />
+        <button id="add-button" onclick="addButton()">Add Task</button>
+        <button id="update-button" style="width: 22%" class="updatebtn">
+          Update Task
+        </button>
+        <div class="element-list">
+          <ul id="task-list"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
